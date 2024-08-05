@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ahmed Maher">
+    <meta name="robots" content="index, follow">
+    <!-- SEO Meta Tags -->
+    <title>Product Management System - CRUD Operations</title>
+    <meta name="description" content="A comprehensive Product Management System featuring CRUD operations. Built with JavaScript, HTML5, CSS3, Bootstrap, Font Awesome, and Popper.js for an intuitive and modern user experience.">
+    <meta name="keywords" content="Product Management, CRUD Operations, JavaScript, HTML5, CSS3, Bootstrap, Font Awesome, Popper.js, Web Development">
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Product Management System - CRUD Operations">
+    <meta property="og:description" content="A comprehensive Product Management System featuring CRUD operations. Built with JavaScript, HTML5, CSS3, Bootstrap, Font Awesome, and Popper.js for an intuitive and modern user experience.">
+    <meta property="og:image" content="URL_to_a_screenshot_or_logo_of_your_project">
+    <meta property="og:url" content="URL_of_your_project">
+    <meta property="og:type" content="website">
+    <!-- Page Icon -->
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column gap-100 bg-gray dark-mode"> 
+    <!-- Header -->
+    <header class="text-center mt-5 pt-5">
+        <h1 class="fw-bold mb-0">CRUDS</h1>
+        <p class="fs-4 mb-0">Product Management System</p>
+        <button class="btn text-dark bg-white rounded icon d-flex align-items-center position-absolute">Change Mode: <i class="light-icon fa-solid fa-moon ms-2 fs-5"></i></button>
+    </header>
+    <!-- Main Operations -->
+    <main>
+        <div class="container">
+            <div class="create">
+                <h2 class="text-center fw-bold mb-3 position-relative heading" data-shadow="Create">Create</h2>
+                <div class="inputs d-flex flex-column gap-2">
+                    <input class="p-2 px-3 border-0 bg-dark text-white rounded" type="text" id="title" placeholder="Title *">
+                    <div class="d-flex flex-column flex-md-row flex-wrap gap-2">
+                        <input class="col p-2 px-3 border-0 bg-dark text-white rounded" type="number" id="price" placeholder="Price *">
+                        <input class="col p-2 px-3 border-0 bg-dark text-white rounded" type="number" id="taxes" placeholder="Taxes">
+                        <input class="col p-2 px-3 border-0 bg-dark text-white rounded" type="number" id="ads" placeholder="Ads">
+                        <input class="col p-2 px-3 border-0 bg-dark text-white rounded" type="number" id="discount" placeholder="Discount">
+                        <span class="total col p-2 px-3 border-0 bg-danger text-white fw-bold rounded">Total: <b></b></span>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row gap-2">
+                        <input class="col p-2 px-3 border-0 bg-dark text-white rounded" type="number" id="count" placeholder="Count *">
+                        <input class="col p-2 px-3 border-0 bg-dark text-white rounded" type="text" id="category" placeholder="Category *">
+                    </div>
+                    <button class="btn bg-pink rounded-pill">Create</button>
+                </div>
+            </div>
+            <div class="search mt-5">
+                <h2 class="text-center fw-bold mb-3 position-relative heading" data-shadow="Search">Search</h2>
+                <div class="inputs d-flex flex-wrap row-gap-2 justify-content-between gap-2">
+                    <div class="col-12 col-md-4  d-flex">
+                        <span class="fs-5 fw-bold col-4 col-sm-3 col-md-6 col-lg-4">Search By: </span>
+                        <select id="serached-product" class="p-2 bg-dark text-white rounded col">
+                            <option value="title">Title</option>
+                            <option value="category">Category</option>
+                        </select>
+                    </div>
+                    <input class="col-12 col-md p-2 px-3 border-0 bg-dark text-white rounded" type="text" id="search" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Table -->
+    <section id="table">
+        <div class="table-responsive container-md pt-3">
+            <h2 class="text-center fw-bold mb-3 position-relative heading" data-shadow="Products">Products</h2>
+            <table class="table border text-center">
+                <thead class="border">
+                    <tr>
+                        <th class="col-1">ID</th>
+                        <th class="col-1">Title</th>
+                        <th class="col-1">Price</th>
+                        <th class="col-1">Taxes</th>
+                        <th class="col-1">Category</th>
+                        <th class="col-1">Total</th>
+                        <th class="col-1">Update</th>
+                        <th class="col-1">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="btn btn-danger w-100" onClick="removeAll()">Remove All Products [0]</button>
+        </div>
+    </section>
+    <!-- Backdrop Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Incomplete or Invalid Data</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-danger py-4 fs-5">
+                Please ensure all fields are filled in correctly with valid information before proceeding
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-4 f-large">
+        <p class="text-center mb-1">
+            Copyright &copy; <span id="copyright-year"></span> 
+            Developed By <a class="text-decoration-none c-pink fw-bold" href="https://www.linkedin.com/in/ahmed-maher-algohary" title="About Developer" target="_blank" 
+            data-bs-toggle="tooltip" data-bs-title="About Developer"
+            >Ahmed Maher</a>
+        </p>
+        <span class="d-block text-center">All Rights Reserved</span>
+    </footer>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js.map"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

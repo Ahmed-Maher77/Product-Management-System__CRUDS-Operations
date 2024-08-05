@@ -1,0 +1,82 @@
+:root {
+    --trans-3: 0.3s;
+}
+input {
+    outline: 0;
+    border: 0;
+}
+input:focus, button:focus {
+    transform: scale(1.03) !important;
+}
+input::placeholder {
+    color: rgb(181, 181, 181);
+}
+.gap-100 {
+    gap: 80px
+}
+.c-pink {
+    color: #e97c7c;
+}
+.bg-pink, .bg-pink:focus {
+    background-color: #e97c7c;
+    transition: var(trans-3);
+    color: #fff !important  ;
+}
+.bg-pink:hover, .update-btn {
+    background-color: #0b7609;
+}
+.update-btn:hover {
+    background-color: #0ca00a !important;
+}
+.bg-gray {
+    background-color: #eee;
+}
+.being-edited > td {
+    background-color: #bbdefb !important;
+}
+.active-field {
+    background-color: #0ca00a !important;
+}
+.icon {
+    top: 15px;
+    left: 15px;
+}
+.heading::before {
+    content: attr(data-shadow);
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.1rem;
+    color: #1111111a;
+}
+
+/* Dark Mode */
+body.dark-mode.bg-gray {
+    background-color: #111;
+    color: #fff
+}
+body.dark-mode .table th, body.dark-mode .table td {
+    background-color: #222529a5 !important;
+    color: #fff !important;
+}
+body.dark-mode .table, 
+body.dark-mode .table thead, 
+body.dark-mode .table tr {
+    border-color: #4e4e4e65 !important;
+    border-radius: 5px !important;
+}
+body.dark-mode #serached-product {
+    border-color: #4e4e4e !important;
+}
+body.dark-mode .heading::before {
+    color: #9e9e9e1f;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .f-large {
+        font-size: 1.2rem;
+    }
+}
+
