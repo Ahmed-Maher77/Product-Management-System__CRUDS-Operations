@@ -11,7 +11,7 @@ A user-friendly web application for efficient product management with CRUD opera
 
 <br>
 
-## Kehttps://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations Operations:</b> Full management of product data.
+## Features:
 - <b>Responsive Design:</b> Ensures seamless user experience across various devices.
 - <b>High Performance:</b> Optimized for fast loading and efficient operation.
 - <b>Accessibility:</b> Designed with accessibility in mind to ensure usability for all users.
