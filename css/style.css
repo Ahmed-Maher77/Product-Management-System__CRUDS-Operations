@@ -1,5 +1,17 @@
 :root {
     --trans-3: 0.3s;
+    --dark-black: #111;
+    --light-black: #4e4e4e;
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-black);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--dark-black)
 }
 input {
     outline: 0;
@@ -53,7 +65,7 @@ input::placeholder {
 
 /* Dark Mode */
 body.dark-mode.bg-gray {
-    background-color: #111;
+    background-color: var(--dark-black);
     color: #fff
 }
 body.dark-mode .table th, body.dark-mode .table td {
