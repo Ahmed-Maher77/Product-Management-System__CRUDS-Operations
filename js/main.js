@@ -43,39 +43,47 @@ function createProduct() {
     categoryValue = category.value.trim();
     // Reactivate the count input
     count.removeAttribute('disabled');
-    if (titleValue && priceValue && countValue && categoryValue) {
+    if (titleValue && priceValue && categoryValue) {    // how to ignore count here
         // Create new product or edit existing one
         createBtn.innerText === 'Create' ? createNewProduct() : editExistingProduct();
         // Remove modal attributes if valid
         createBtn.removeAttribute('data-bs-toggle');
         createBtn.removeAttribute('data-bs-target');
     } else {
-        // Show modal if inputs are invalid
-        createBtn.setAttribute('data-bs-toggle', "modal");
-        createBtn.setAttribute('data-bs-target', "#staticBackdrop");
-        createBtn.click();
+        showModal()
     }
+}
+
+// Show modal if inputs are invalid
+function showModal() {
+    createBtn.setAttribute('data-bs-toggle', "modal");
+    createBtn.setAttribute('data-bs-target', "#staticBackdrop");
+    createBtn.click();
 }
 
 // Create new products
 function createNewProduct() {
-    // Enforce count boundaries
-    countValue = Math.max(1, Math.min(countValue, 100));
-    for (let i = 0; i < countValue; i++) {
-        const product = {
-            id: null, // Will be set in showProducts function
-            title: titleValue,
-            price: priceValue,
-            taxes: taxesValue,
-            ads: adsValue,
-            discount: discountValue,
-            category: categoryValue
-        };
-        products.push(product);
-        localStorage.setItem('products', JSON.stringify(products));
+    if (!countValue) {
+        showModal();
+    } else {
+        // Enforce count boundaries
+        countValue = Math.max(1, Math.min(countValue, 100));
+        for (let i = 0; i < countValue; i++) {
+            const product = {
+                id: null, // Will be set in showProducts function
+                title: titleValue,
+                price: priceValue,
+                taxes: taxesValue,
+                ads: adsValue,
+                discount: discountValue,
+                category: categoryValue
+            };
+            products.push(product);
+            localStorage.setItem('products', JSON.stringify(products));
+        }
+        showProducts(products);
+        clearInputs();
     }
-    showProducts(products);
-    clearInputs();
 }
 
 // Edit an existing product

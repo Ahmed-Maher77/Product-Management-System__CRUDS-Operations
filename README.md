@@ -5,7 +5,7 @@ A user-friendly web application for efficient product management with CRUD opera
 
 ➲ **Used Technologies:**
 - Frontend: JavaScript - HTML/HTML5 - CSS/CSS3 - Git
-- Libraries & Frameworks: Bootstrap, Font Awesome, Popper.js
+- Libraries & Frameworks: Bootstrap - Font Awesome - Popper.js
 
 ➲ **Demo (Live Preview):** <a href="https://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations/" target="_blank">https://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations/</a> 
 
