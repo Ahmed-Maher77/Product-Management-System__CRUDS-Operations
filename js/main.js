@@ -88,6 +88,8 @@ function createNewProduct() {
 
 // Edit an existing product
 function editExistingProduct() {
+    console.log('editExistingProduct');
+    
     products.forEach(product => {
         if (product.id == currentEditedId) {
             // Update product details
