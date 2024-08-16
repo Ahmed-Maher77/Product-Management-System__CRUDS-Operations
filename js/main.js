@@ -40,7 +40,7 @@ function createProduct() {
     adsValue = ads.value.trim();
     discountValue = discount.value.trim();
     countValue = count.value.trim();
-    categoryValue = category.value.trim();
+    categoryValue = category.value;
     // Reactivate the count input
     count.removeAttribute('disabled');
     if (titleValue && priceValue && categoryValue) {    // how to ignore count here
@@ -221,8 +221,8 @@ function removeAll() {
 // Search products
 function searchProducts() {
     const searchBy = serachedProduct.value;
-    const searchFor = search.value.trim();
-    const filteredProducts = products.filter(ele => ele[searchBy].includes(searchFor));
+    const searchFor = search.value.trim().toLowerCase();
+    const filteredProducts = products.filter(ele => ele[searchBy].toLowerCase().includes(searchFor));
     showProducts(filteredProducts);
     removeAllBtn.disabled = searchFor.length > 0;
 }
