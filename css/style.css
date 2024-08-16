@@ -72,6 +72,9 @@ body.dark-mode .table th, body.dark-mode .table td {
     background-color: #222529a5 !important;
     color: #fff !important;
 }
+body.dark-mode .table .being-edited > td {
+    background-color: #616161 !important
+}
 body.dark-mode .table, 
 body.dark-mode .table thead, 
 body.dark-mode .table tr {
