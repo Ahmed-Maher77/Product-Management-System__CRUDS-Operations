@@ -50,7 +50,8 @@ function createProduct() {
         createBtn.removeAttribute('data-bs-toggle');
         createBtn.removeAttribute('data-bs-target');
     } else {
-        showModal()
+        showModal();
+        resetModal()
     }
 }
 
@@ -59,6 +60,12 @@ function showModal() {
     createBtn.setAttribute('data-bs-toggle', "modal");
     createBtn.setAttribute('data-bs-target', "#staticBackdrop");
     createBtn.click();
+}
+
+// Remove modal attributes
+function resetModal() {
+    createBtn.removeAttribute('data-bs-toggle');
+    createBtn.removeAttribute('data-bs-target');
 }
 
 // Create new products
