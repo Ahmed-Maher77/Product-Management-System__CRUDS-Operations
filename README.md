@@ -1,6 +1,7 @@
 # Product Management System - CRUD Operations
 
-A user-friendly web application for efficient product management featuring CRUD operations (Create, Read, Update, Delete) and search functionality, utilizing localStorage for persistent data management. Built with JavaScript, HTML5, and CSS3, the system uses Bootstrap for responsive design, Font Awesome for intuitive icons, and Popper.js for enhanced tooltips.
+A modern, user-friendly web application for efficient product management, featuring full CRUD operations (Create, Read, Update, Delete), advanced search capabilities, and product status tracking with persistent storage via localStorage. Built with JavaScript, HTML, and CSS, it leverages Bootstrap for responsive design, Font Awesome for intuitive iconography, and Popper.js for interactive tooltips.
+
 
 <hr/>
 
