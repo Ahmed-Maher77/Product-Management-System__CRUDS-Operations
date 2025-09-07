@@ -35,9 +35,15 @@ const dummyData = [
 		ads: 0,
 		discount: 0,
 		category: "Test",
+		completed: false,
 	},
 ];
 let products = JSON.parse(localStorage.getItem("products")) || dummyData;
+// Normalize existing products to include `completed` flag
+products = products.map((product) => ({
+	...product,
+	completed: product.completed ?? false,
+}));
 
 /* ======================== INITIALIZATION ======================== */
 // Initialize tooltips (Bootstrap)
@@ -260,6 +266,7 @@ function createNewProduct() {
 				ads: adsValue,
 				discount: discountValue,
 				category: categoryValue,
+				completed: false,
 			};
 			products.push(product);
 			localStorage.setItem("products", JSON.stringify(products));
@@ -353,27 +360,30 @@ function showProducts(data) {
 	data.forEach((product, index) => {
 		// Set product ID
 		product.id = index + 1;
+		const rowClass = product.completed ? " completed-row" : "";
+		const completedBtnClass = product.completed
+			? "btn-secondary"
+			: "btn-outline-secondary";
+		const completedBtnText = product.completed ? "Completed" : "Complete";
 		tbody.innerHTML += `
-            <tr class="align-middle">
-                <td>${product.id}</td>      
-                <td>${product.title}</td>
-                <td>${product.price}</td>
-                <td>${product.taxes}</td>
-                <td>${product.category}</td>
-                <td>${
-					product.price -
-					product.taxes -
-					product.ads -
-					product.discount
-				}</td>
-                <td>
-                    <button class="btn btn-success rounded-pill px-4" onClick="updateProduct(this)">Update</button>
-                </td>
-                <td>
-                    <button class="btn btn-danger rounded-pill px-4" onClick="deleteProduct(this)">Delete</button>
-                </td>
-            </tr>
-        `;
+			<tr class="align-middle${rowClass}">
+				<td>${product.id}</td>      
+				<td>${product.title}</td>
+				<td>${product.price}</td>
+				<td>${product.taxes}</td>
+				<td>${product.category}</td>
+				<td>${product.price - product.taxes - product.ads - product.discount}</td>
+				<td>
+					<button class="btn ${completedBtnClass} rounded-pill px-4" onClick="toggleCompleted(this)">${completedBtnText}</button>
+				</td>
+				<td>
+					<button class="btn btn-success rounded-pill px-4" onClick="updateProduct(this)">Update</button>
+				</td>
+				<td>
+					<button class="btn btn-danger rounded-pill px-4" onClick="deleteProduct(this)">Delete</button>
+				</td>
+			</tr>
+		`;
 	});
 	// Update the removeAll button text
 	removeAllBtn.innerText = `Remove All Products [${data.length}]`;
@@ -458,4 +468,18 @@ function toggleDarkMode() {
 function copyrightsYear() {
 	const copyrightSpan = document.getElementById("copyright-year");
 	copyrightSpan.innerHTML = new Date().getFullYear();
+}
+
+// Toggle completed state
+function toggleCompleted(ele) {
+	const productId =
+		ele.parentElement.parentElement.querySelector("td").innerText;
+	products = products.map((product) => {
+		if (product.id == productId) {
+			return { ...product, completed: !product.completed };
+		}
+		return product;
+	});
+	localStorage.setItem("products", JSON.stringify(products));
+	showProducts(products);
 }

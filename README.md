@@ -1,56 +1,51 @@
 # Product Management System - CRUD Operations
+
 A user-friendly web application for efficient product management featuring CRUD operations (Create, Read, Update, Delete) and search functionality, utilizing localStorage for persistent data management. Built with JavaScript, HTML5, and CSS3, the system uses Bootstrap for responsive design, Font Awesome for intuitive icons, and Popper.js for enhanced tooltips.
 
 <hr/>
 
-## 💻 **Technologies Used**
+## 💻 Technologies Used
 
-- **JavaScript (ES6+)** – For dynamic functionality and interactivity  
-- **HTML5** – For semantic and accessible markup  
-- **CSS3** – For responsive layouts and modern styling  
-- **Bootstrap** – For a mobile-first, component-based UI framework  
-- **Git** – For version control and collaboration  
-- **Additional Libraries & Tools:**  
-   - Font Awesome (icons)  
-   - Popper.js (tooltips & popovers)  
-   - Google Fonts (typography)  
-
-
-<hr/>
-
-## 🌐 **Demo (Live Preview):** 
-
-**Live Preview:** <a href="https://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations/" target="_blank">https://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations/</a> 
+-   **JavaScript (ES6+)** – Adds interactivity, logic, and dynamic functionality.
+-   **HTML / HTML5** – Provides the structural foundation of the UI with semantic elements and accessibility features (e.g., ARIA).
+-   **CSS / CSS3** – Handles styling, layout, responsiveness, animations, and theme customization (including dark mode).
+-   **Bootstrap** – Ensures a modern, mobile-first, and consistent UI design.
+-   **Git** – Manages version control for efficient tracking and collaboration.
+-   **Supporting Tools & Libraries:**
+    -   **Font Awesome** – Professional, scalable icon set.
+    -   **Popper.js** – Enables tooltips and popovers for improved usability.
+    -   **Google Fonts** – Enhances typography and visual appeal.
+    -   **LocalStorage** – Provides client-side data persistence across sessions.
 
 <hr/>
 
-## 🎥 **Watch Video on LinkedIn:** 
+## 🌐 **Demo (Live Preview):**
 
-**Watch Preview Video:** <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230217089851039745/" target="_blank">https://www.linkedin.com/feed/update/urn:li:activity:7230217089851039745/</a> 
+**Live Preview:** <a href="https://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations/" target="_blank">https://ahmed-maher77.github.io/Product-Management-System\_\_CRUDS-Operations/</a>
+
+<hr/>
+
+## 🎥 **Watch Video on LinkedIn:**
+
+**Watch Preview Video:** <a href="https://www.linkedin.com/feed/update/urn:li:activity:7230217089851039745/" target="_blank">https://www.linkedin.com/feed/update/urn:li:activity:7230217089851039745/</a>
 
 <hr/>
 
 ## ✨ Key Features
 
-- **Create** – Add new products with details such as title, price, taxes, ads, discount, count, and category.  
-- **Read** – Display a dynamic list of products with details and automatically updated totals.  
-- **Update** – Edit existing product information with real-time reflection of changes.  
-- **Delete** – Remove individual products or clear the entire product list.  
-- **Search** – Quickly locate products using multiple search criteria.  
-- **Responsive Design** – Ensures a seamless experience across devices of all sizes.  
-- **High Performance** – Optimized for fast load times and efficient operations.  
-- **Accessibility** – Designed with WCAG standards in mind for inclusive usability.  
-- **SEO Optimization** – Includes meta tags, descriptive titles, alt text for images, and semantic HTML elements for improved visibility in search engines.  
-- **Clean Code & Best Practices** – Well-structured, maintainable, and modern code ensuring browser compatibility and scalability.  
-- **Dynamic Interface** – Built with Bootstrap for a sleek, modern, and consistent UI.  
-- **Interactive Tooltips** – Enhanced with Popper.js for clear and intuitive guidance.  
-- **Iconography** – Utilizes Font Awesome for professional and user-friendly icons.  
-- **High-Quality UX** – Focused on clarity, accessibility, smooth navigation, and engaging interactions.  
-- **Dark/Light Mode** – Provides theme switching for reduced eye strain and enhanced personalization.  
+-   **CRUD Operations** – Create, view, update, and delete products with full details (title, price, taxes, discount, category, etc.).
+-   **Status Tracking** – Mark products as **Complete/Completed** with persistent storage in **localStorage**; completed items are styled with a line-through and reduced opacity for clarity.
+-   **Search & Filter** – Quickly locate products using multiple search criteria.
+-   **Responsive Design** – Optimized for all screen sizes and devices.
+-   **Performance & Accessibility** – Fast load times with WCAG-compliant inclusive design.
+-   **SEO-Friendly** – Semantic HTML, meta tags, and descriptive elements for better search visibility.
+-   **Modern UI/UX** – Built with Bootstrap, Font Awesome, and interactive tooltips for a sleek and intuitive experience.
+-   **Theme Options** – Dark/Light mode support for comfort and personalization.
 
 <hr/>
 
 ## 👀 Website Preview:
+
 <a href="https://ahmed-maher77.github.io/Product-Management-System__CRUDS-Operations/" title="demo">
   <img src="https://github.com/user-attachments/assets/ffb13e99-49a9-4b41-bcac-52cf8420353b" alt="website preview - UI Mockup" width="400">
 </a>
@@ -61,29 +56,30 @@ A user-friendly web application for efficient product management featuring CRUD 
 
 Follow these steps to set up the project locally on your machine:
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
-   ```
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
 2. **Navigate to the project directory**
-   ```
-   cd your-repository
-   ```
+    ```
+    cd your-repository
+    ```
 3. **Open the project** <br/>
-   open the ```index.html``` file directly in your browser.
+   open the `index.html` file directly in your browser.
    <br/>
    **OR**
-   ```
-   # Using VS Code Live Server
-   Right-click index.html → "Open with Live Server"
-   ```
+    ```
+    # Using VS Code Live Server
+    Right-click index.html → "Open with Live Server"
+    ```
 
 <hr/>
 
 ## 📬 Contact & Contribution
-- 🧑‍💻 **Portfolio:** <a href="https://ahmedmaher-portfolio.vercel.app/" title="See My Portfolio">https://ahmedmaher-portfolio.vercel.app/</a>
-- 🔗 **LinkedIn:** <a href="https://www.linkedin.com/in/ahmed-maher-algohary" title="Contact via LinkedIn">https://www.linkedin.com/in/ahmed-maher-algohary</a>
-- 📧 **Email:** <a href="mailto:ahmedmaher.dev1@gmail.com" title="Contact via Email">ahmedmaher.dev1@gmail.com</a>
+
+-   🧑‍💻 **Portfolio:** <a href="https://ahmedmaher-portfolio.vercel.app/" title="See My Portfolio">https://ahmedmaher-portfolio.vercel.app/</a>
+-   🔗 **LinkedIn:** <a href="https://www.linkedin.com/in/ahmed-maher-algohary" title="Contact via LinkedIn">https://www.linkedin.com/in/ahmed-maher-algohary</a>
+-   📧 **Email:** <a href="mailto:ahmedmaher.dev1@gmail.com" title="Contact via Email">ahmedmaher.dev1@gmail.com</a>
 
 > Contributions, suggestions, and bug reports are welcome. Feel free to open issues or pull requests.
 

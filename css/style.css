@@ -441,6 +441,12 @@ select {
 	animation-fill-mode: both;
 }
 
+/* Completed row state */
+.completed-row > td {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
 .table tbody tr:nth-child(1) {
 	animation-delay: 0.1s;
 }
